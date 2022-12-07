@@ -1,0 +1,293 @@
+.main-contents {
+    margin-bottom: 20px;
+    .main-con {
+        display: block;
+        .new-articles {
+            flex: 65%;
+            margin-right: 15px;
+            .title {
+                text-align: center;
+                font-family: 'Noto Sans JP', sans-serif;
+            }
+            .cards {
+                display: block;
+                flex-wrap: wrap;
+                .card {
+                    flex: 50%;
+                    margin-bottom: 10px;
+                    a {
+                        .card-image {
+                            background-color: black;
+                            img {
+                                opacity: 0.7;
+                                display: block;
+                                width: 100%;
+                                height: auto;
+                                position: relative;
+                            }
+                            .card-desc {
+                                width: 100%;
+                                height: 100%;
+                                color: white;
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                padding: 10px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                align-items: flex-end;
+                                .badge-wrap {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: left;
+                                }
+                                .card-desc-inner {
+                                    width: 80%;
+                                    .desc-desc {
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    a:hover {
+                        .card-image {
+                            img {
+                                opacity: 0.5;
+                            }
+                        }
+                    }
+                }
+            }
+            .main-article {
+                .article-image {
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .article-title {
+                    font-family: 'Noto Sans JP', sans-serif;
+                    margin: 10px 0;
+                }
+                .main-desc {
+                    margin-bottom: 10px;
+                }
+                .index {
+                    background-color: $page-bg-color;
+                    border-radius: 10px;
+                    padding: 20px;
+                    width: 270px;
+                    margin-bottom: 10px;
+                    ul {
+                        list-style:disc;
+                        padding-left: 10px;
+                    }
+                }
+                .desc-title {
+                    .title-line {
+                        position: relative;
+                        .under-line {
+                            width: 100%;
+                            border-bottom: 5px solid $page-bg-color;
+                        }
+                        .main-line {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 30%;
+                            border-bottom: 5px solid $white-blue;
+                        }
+                    }
+                }
+            }
+            .related-articles {
+                .title {
+                    text-align: left;
+                    font-family: 'Noto Sans JP', sans-serif;
+                }
+                .cards {
+                    a {
+                        flex: 45%;
+                        .card {
+                            display: flex;
+                            flex-direction: row;
+                            margin: 0;
+                            margin-bottom: 5px;
+                            .card-image  {
+                                // background-image: url(../img/test.jpg);
+                                // background-size:cover;
+                                // background-position: center;
+                                flex: 4;
+                                img {
+                                    display: block;
+                                    height: auto;
+                                    width: 100%;
+                                }
+                            }
+                            .card-desc {
+                                flex: 6;
+                            }
+                        }
+                    }
+                }
+                a:hover {
+                    box-shadow: 5px 5px $page-bg-color;
+                }
+            }
+            .pagination {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .page-item {
+                    padding: 0 3px;
+                }
+                .page-arrow-wrap {
+                    .page-ellipse {
+                        width: 40px;
+                        height: 30px;
+                        border-radius: 20px;
+                        border: solid 1px $dark-blue;
+                        position: relative;
+                        .page-arrow {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+                .pagenum {
+                    .page-circle {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        border: 1px solid $dark-blue;
+                        position: relative;
+                        .page-number {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+                .current {
+                    .page-circle {
+                        background-color: $white-blue;
+                    }
+                }
+            }
+        }
+        .sidebar {
+            flex: 30%;
+            padding-top: 10px;
+            a {
+                text-decoration: none;
+            }
+            .searching {
+                margin-bottom: 20px;
+                form {
+                    display: flex;
+                    input {
+                        flex: 70%;
+                    }
+                    button {
+                        flex: 25%;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .popular-article {
+                .title {
+                    font-family: 'Noto Sans JP', sans-serif;
+                    text-align: center;
+                }
+                .cards {
+                    .card {
+                        margin-bottom: 5px;
+                        a {
+                            display: flex;
+                            flex-direction: row;
+                            .card-image {
+                                flex: 30%;
+                                width: 100%;
+                                img {
+                                    display: block;
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+                            .card-desc-title {
+                                flex: 70%;
+                                display: flex;
+                                align-items: center;
+                                .card-desc-inner {
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+@media (min-width: 426px) {
+    .main-con {
+        .new-articles {
+            .related-articles {
+                .cards {
+                    display: flex;
+                    a {
+                        margin-right: 5px;
+                        margin-bottom: 5px;
+                        .card {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            .pagination {
+                .page-arrow-wrap {
+                    .page-ellipse {
+                        width: 75px;
+                        height: 50px;
+                        border-radius: 25px;
+                    }
+                }
+                .pagenum {
+                    .page-circle {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .main-con {
+        display: flex;
+    }
+}
+@media (min-width: 1024px) {
+    .main-con {
+        .new-articles {
+            .cards {
+                display: flex;
+                .card {
+                    flex: 0 0 45%;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+}

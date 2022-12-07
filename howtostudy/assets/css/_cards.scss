@@ -1,0 +1,105 @@
+.three-cards {
+    a  {
+        text-decoration: none;
+    }
+    background-color: $page-bg-color;
+    margin-top: 25px;
+    .card-con {
+        .cards-title {
+            width: 100%;
+            text-align: center;
+            padding-top: 20px;
+            font-family: 'Noto Sans JP', sans-serif;
+            .title-bg {
+                background-color: white;
+                h2 {
+                    margin: 0;
+                }
+            }
+        }
+        .cards {
+            padding: 20px 0;
+            .card {
+                flex: 1;
+                margin-bottom: 10px;
+                a {
+                    display: flex;
+                    height: 100%;
+                    .cat-card-image {
+                         flex: 3;
+                        // width: 100%;
+                        // padding: 20px;
+                        // display: flex;
+                        // flex-wrap: nowrap;
+                        // justify-content: center;
+                        // align-items: center;
+                        // .card-image-buff {
+                        //     padding: 60px;
+                        //     position: relative;
+                        //     .card-image-inner {
+                        //         position: absolute;
+                        //         top: 0;
+                        //         right: 0;
+                        //         width: 100%;
+                        //         height: 100%;
+                        //         display: flex;
+                        //         justify-content: center;
+                        //         align-items: center;
+                        //         border-radius: 50%;
+                        //         border: 5px solid $dark-blue;
+                        //         img {
+                        //         width: 70%;
+                        //         height: 70;
+                        //         }
+                        //     }
+                        // }
+                    }
+                    .card-desc {
+                        flex: 7;
+                        padding: 10px;
+                        .title {
+                            text-align: center;
+                            border-bottom: 2px solid $dark-blue;
+                            h3 {
+                                margin: 0;
+                            }
+                        }
+                        .main-desc {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+@media (min-width: 768px) {
+    .card-con {
+        .cards {
+            display: flex;
+            .card {
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .card-con {
+        .cards {
+            a {
+                .card {
+                    .card-image {
+                        .card-image-buff {
+                            padding: 80px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .card-image-buff {
+        padding: 80px;
+    }
+}
+}

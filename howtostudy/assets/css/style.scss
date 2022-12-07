@@ -1,0 +1,49 @@
+$dark-blue: #082f50;
+$middle-blue: #144e94;
+$white-blue: #a5c5d6;
+$page-bg-color:  rgb(246, 247, 255);
+
+body {
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+@import 'header';
+@import 'slides';
+@import 'cards';
+@import 'main';
+@import 'profile';
+@import 'footer';
+
+// archive.html
+@import 'a-title';
+@import 'a-main';
+
+// 親ボックスはdisplay: flex
+.cat-card-image {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    .card-image-buff {
+        padding: 60px;
+        position: relative;
+        .card-image-inner {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 5px solid $dark-blue;
+            img {
+            width: 70%;
+            height: 70%;
+            }
+        }
+    }
+}
