@@ -57,7 +57,7 @@
         <div class="card-con container">
             <div class="cards-title">
                 <div class="title-bg">
-                    <h2>主なコンテンツ</h2>
+                    <h2>最近の投稿</h2>
                 </div>
             </div>
             <div class="cards">
@@ -85,7 +85,7 @@
                             <div class="cat-card-image">
                                 <div class="card-image-buff">
                                     <div class="card-image-inner">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shield.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test2.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
