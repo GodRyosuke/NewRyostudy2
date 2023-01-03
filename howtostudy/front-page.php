@@ -1,135 +1,10 @@
 <?php get_header(); ?>
 
-    <section class="slides">
-        <div class="image-con carousel slide container" data-bs-ride="carousel" id="slides">
-            <ol class="carousel-indicators">
-                <li data-bs-target="#slides" data-bs-slide-to="0" class="active"></li>
-                <li data-bs-target="#slides" data-bs-slide-to="1"></li>
-                <li data-bs-target="#slides" data-bs-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="c-item carousel-item active">
-                    <a href="#">
-                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sky-building.jpg" alt=""> -->
-                    </a>
-                </div>
-                <?php
-                $args = array(
-                    'post_type' => 'any',
-                    'post__in' => array(28, 1),5
-                );
-                $query = new WP_Query($args);
-                if ($query->have_posts()):
-                    while ($query->have_posts()):
-                        $query->the_post();
-                ?>
-                <div class="c-item carousel-item">
-                    <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail(); ?>
-                    </a>
-                </div>
-                <?php
-                    endwhile;
-                endif;
-                wp_reset_postdata();
-                ?>
-            </div>
-            <a class="carousel-control-prev" href="#slides" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#slides" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </a>
-            <!-- <a href="#slides" class="carousel-control-prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true" role="button" data-bs-slide="prev"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a href="#slides" class="carousel-control-next">
-                <span class="carousel-control-next-icon" aria-hidden="true" role="button" data-bs-slide="next"></span>
-                <span class="visually-hidden">Next</span>
-            </a> -->
-        </div>
-    </section>
 
-    <section class="three-cards">
-        <div class="card-con container">
-            <div class="cards-title">
-                <div class="title-bg">
-                    <h2>最近の投稿</h2>
-                </div>
-            </div>
-            <div class="cards">
-                    <div class="card">
-                        <a href="<?php echo esc_url(home_url('category/physics')); ?>">
-                            <div class="cat-card-image">
-                                <div class="card-image-buff">
-                                    <div class="card-image-inner">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sword.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-desc">
-                                <div class="title">
-                                    <h3>物理をする！</h3>
-                                </div>
-                                <div class="main-desc">
-                                    数学を用いて基本的な物理問題を解いていきます。何事も基本が大事であり、基本が理解できているからこそ現代物理学などの高度な学問理解につながっていくものだと考えています。不正確な知識を更新し、より正しい知識に修正していく作業において、ぜひ役立ててください。
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="<?php echo esc_url(home_url('category/math')); ?>">
-                            <div class="cat-card-image">
-                                <div class="card-image-buff">
-                                    <div class="card-image-inner">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test2.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-desc">
-                                <div class="title">
-                                    <h3>数学をする！</h3>
-                                </div>
-                                <div class="main-desc">
-                                    現代科学は数学なくしては成り立ちません。しかし、その数学力は一朝一夕には身につく力ではなく、小さな積み重ねやトレーニングにより少しずつ身についていくものだと思っています。数学の知識構築に役立つ記事を作っています。
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card">
-                        <a href="<?php echo esc_url(home_url('category/howtostudy')); ?>">
-                            <div class="cat-card-image">
-                                <div class="card-image-buff">
-                                    <div class="card-image-inner">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gold.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-desc">
-                                <div class="title">
-                                    <h3>勉強法を知る！</h3>
-                                </div>
-                                <div class="main-desc">
-                                    同じ環境で同じように教育を受けていても、学業の差は開いていくものです。その差は才能の影響もあるとは思いますが、多くはやり方でカバーできるものだと考えています。非効率な勉強法を改めることによってより良い勉強の成果が望めるでしょう。
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                
-            </div>
-        </div>
-    </section>
 
     <section class="main-contents">
         <div class="main-con container">
             <div class="new-articles">
-                <div class="title">
-                    <h2>最近の投稿</h2>
-                </div>
                 <div class="cards">
 <?php
     $paged = get_query_var('paged', 1)?:1;
@@ -144,28 +19,50 @@
             $my_posts->the_post();
 ?>
                     <div class="card">
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="card-image">
-                                <?php the_post_thumbnail('main'); ?>
-                                <div class="card-desc">
-                                    <div class="badge-wrap">
-                                        <object data="" type=""><a href="#">
-                                            <div class="category badge bg-primary">
-                                                <?php the_category(); ?>
-                                            </div>
-                                        </a></object>
-                                    </div>
-                                    <div class="card-desc-inner">
-                                        <div class="desc-title">
-                                            <h3><?php the_title(); ?></h3>
-                                        </div>
-                                        <div class="desc-desc">
-                                            <?php echo get_the_excerpt(); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                        <a class="card-link" href="<?php the_permalink(); ?>"></a>
+                        <div class="category">
+<?php
+$cats = get_the_category();
+if (!empty($cats)) {
+    foreach ($cats as $cat) {
+        printf("<a href='%s'><span class='cat-btn btn-category'>%s</span></a>", get_category_link($cat->term_id), $cat->name);
+    }
+} else {
+    printf("no category");
+}
+?>
+                        </div>
+                        <div class="time">
+                        <?php the_time( 'Y/m/d' ); ?>
+                        </div>
+                        <div class="title">
+                            <?php the_title(); ?>
+                        </div>
+                        <div class="tag-buf"></div>
+                        <div class="tags">
+                        <i class="fas fa-tag"></i>
+<?php
+    $tags = get_the_tags();
+    if ( !empty( $tags ) ) {
+        foreach ( $tags as $tag ) {
+            printf(
+                '<span class="tag"><a href="%s">%s</a></span>',
+                get_tag_link( $tag->term_id ),
+                $tag->name
+            );
+        }
+        
+        // printf(
+        // '<a href="%s">%s</a>',
+        // get_tag_link( $tags[0]->term_id ),
+        // $tags[0]->name
+        // );
+    } else {
+        echo "no tag";
+    }
+?>
+
+                        </div>
                     </div>
                     
 <?php
@@ -302,24 +199,6 @@ wp_reset_postdata();
         </div>
     </section>
 
-    <section class="profile">
-        <div class="profile-con container">
-            <div class="profile-image">
-                <div class="profile-circle">
-                  <div class="profile-image-outer">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/agura_kutsurogu2_man.png" alt="">
-                  </div>
-                </div>
-            </div>
-            <div class="profile-desc">
-                <div class="profile-desc-title">
-                    <h3>書いているひと</h3>
-                </div>
-                <div class="profile-desc-inner">
-                    理系大学生です。中学、高校で「勉強の成果をどうしたら上げられるのか？」という問いに対して試行錯誤し（今でもずっと続いていますが）、その成果を発信しています。また、大学に入ってからより一層学問の面白さを知り、その学んだ知識のアウトプットとして、このサイトを自分の正確な知識構築に役立てるとともに、わからないことがある人の悩み解消に役立てればと思っています。
-                </div>
-            </div>
-        </div>
-    </section>
+
 
 <?php get_footer(); ?>

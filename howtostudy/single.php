@@ -4,12 +4,20 @@
         <div class="main-con container">
             <div class="new-articles">
                 <div class="main-article">
-                    <div class="article-image">
-                        <?php the_post_thumbnail(); ?>
-                    </div>
-                    <div class="article-title">
-                        <h2><?php the_title(); ?></h2>
-                    </div>
+                    <div class="time"><?php the_time( 'Y/m/d' ); ?></div>
+                    <div class="article-title"><?php the_title(); ?></div>
+                    <div class="category">
+<?php
+$cats = get_the_category();
+if (!empty($cats)) {
+    foreach ($cats as $cat) {
+        printf("<a href='%s'><span class='cat-btn btn-category'>%s</span></a>", get_category_link($cat->term_id), $cat->name);
+    }
+} else {
+    printf("no category");
+}
+?>
+                        </div>
                     <?php
                     if (have_posts()):
                         while (have_posts()):
@@ -18,6 +26,16 @@
                         endwhile;
                     endif;
                     ?>
+                            <pre>
+                                <code class="prettyprint linenums">#include &lt;iostream&gt;
+    
+    // これはmain関数です
+    int main(int argc, char** argv)
+    {
+        std::cout << "hello world\n";
+        return 0;
+    }</code>
+                            </pre>
                     <!-- <div class="main-desc">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores necessitatibus nam sed exercitationem nemo culpa voluptates, harum porro? Commodi perferendis ipsum dolorum similique beatae. Quas praesentium nostrum consequuntur ipsa dolore!
                     </div>
