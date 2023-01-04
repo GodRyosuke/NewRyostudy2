@@ -23,8 +23,11 @@
     <section class="main-contents">
         <div class="main-con container">
             <div class="new-articles">
-                <div class="title">
-                    <h2>記事一覧</h2>
+                <div class="cat-header">
+                    <div class="sub-title">- CATEGORY -</div>
+                    <div class="title">
+                        <h2><?php single_cat_title(); ?></h2>
+                    </div>
                 </div>
                 <div class="cards">
 <?php

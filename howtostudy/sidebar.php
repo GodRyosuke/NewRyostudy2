@@ -9,7 +9,7 @@
         <div class="profile-image">
             <div class="profile-circle">
               <div class="profile-image-outer">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/programer.png" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/robot.png" alt="">
               </div>
             </div>
         </div>

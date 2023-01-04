@@ -85,9 +85,25 @@
                     }
                 }
             }
+            .cat-header {
+                background-color: white;
+                margin-bottom: 15px;
+                padding: 10px;
+                .sub-title {
+                    color: $super-dark-gray;
+                    font-size: 0.9rem;
+                    text-align: center;
+                }
+                .title {
+                    h2 {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
             .main-article {
                 background-color: white;
-                padding: 0 15px;
+                padding: 15px;
+                margin-bottom: 15px;
                 .article-image {
                     img {
                         display: block;
@@ -102,6 +118,7 @@
                 .article-title {
                     font-size: 1.4rem;
                     font-family: 'Noto Sans JP', sans-serif;
+                    margin-bottom: 15px;
                 }
                 .category {
                     display: flex;
@@ -155,6 +172,8 @@
                     }
                 }
                 a {
+                    display: inline;
+                    overflow-wrap: break-word;
                     text-decoration: underline;
                 }
                 .has-background {
@@ -168,11 +187,61 @@
                 }
                 pre {
                     code {
+                        overflow-x: auto;
+                        min-width: 100%;
+                        // white-space:nowrap;
+                        padding: 10px;
                         ol {
                             background-color: #1d1f21;
                         }
                     }
                 }
+                .tags {
+                    margin-bottom: 10px;
+                    .tag {
+                        z-index: 3;
+                        // background-color: $dark-gray;
+                        // font-size: 0.5rem;
+                        color: black;
+                        // padding: 0 10px;
+                        margin: 0 7px;
+                        // margin: 0 2px;
+                    }
+                }
+                .cards {
+                    padding: 10px;
+                    .card {
+                        border: 2px solid $dark-gray;
+                        margin-bottom: 10px;
+                        p {
+                            margin: 0;
+                        }
+                        a {
+                            display: inline;
+                        }
+                    }
+                    .next {
+                        text-align: right;
+                    }
+                }
+                form {
+                    padding: 10px;
+                    span {
+                        width: 100%;
+                        display: block;
+                        input {
+                            width: 100%;
+                        }
+                    }
+                    .wpcf7-submit {
+                        display: inline;
+                        width: 130px;
+                        border: none;
+                        background-color: $white-blue;
+                        color: white;
+                    }
+                }
+
                 
                 .main-desc {
                     margin-bottom: 10px;
@@ -209,8 +278,26 @@
                 .title {
                     text-align: left;
                     font-family: 'Noto Sans JP', sans-serif;
+                    color: white;
+                    background-color: $dark-blue;
+                    padding: 10px;
+                    h2 {
+                        font-size: 1rem;
+                        margin: 0;
+                    }
                 }
                 .cards {
+                    .card {
+                        margin-bottom: 10px;
+                        .title {
+                            text-align: left;
+                            font-weight: bold;
+                            background-color: white;
+                            color: black;
+                            transition: 0.5s;
+                            padding: 0;
+                        }
+                    }
                     a {
                         flex: 45%;
                         .card {
@@ -412,10 +499,12 @@
                     background-color: white;
                     .tag {
                         background-color: $dark-gray;
+                        display: inline-block;
                         border-radius: 5px;
                         padding: 2px 5px;
                         margin-right: 5px;
                         transition: 0.5s;
+                        margin-bottom: 5px;
                         a {
                             color: black;
                         }
@@ -477,8 +566,8 @@
                 // display: flex;
                 .card {
                     // flex: 0 0 45%;
-                    margin-right: 10px;
-                    margin-left: 10px;
+                    // margin-right: 10px;
+                    // margin-left: 10px;
                 }
             }
         }

@@ -3,29 +3,18 @@
         <div class="main-con container">
             <div class="new-articles">
                 <div class="cat-header">
-                    <div class="sub-title">- SEARCH -</div>
+                    <div class="sub-title">- CATEGORY -</div>
                     <div class="title">
-                        <h2>
-                        <?php
-                        if (get_search_query()):
-                            the_search_query();
-                        ?>
-                        の検索結果:<?php echo $wp_query->found_posts; ?>件
-                        <?php elseif (!get_search_query()): ?>
-                        検索ワードが入力されていません
-                        <?php else: ?>
-                        該当する記事が見つかりませんでした
-                        <?php endif; ?>
-                        </h2>
+                        <h2><?php single_cat_title(); ?></h2>
                     </div>
                 </div>
                 <div class="cards">
-                <?php
-                $paged = get_query_var('paged', 1)?:1;
-                if (have_posts() && get_search_query()):
-                    while (have_posts()):
-                        the_post();
-                ?>
+<?php
+    $paged = get_query_var('paged', 1)?:1;
+    if (have_posts()):
+        while (have_posts()):
+            the_post();
+?>
                     <div class="card">
                         <a class="card-link" href="<?php the_permalink(); ?>"></a>
                         <div class="category">
@@ -72,16 +61,14 @@ if (!empty($cats)) {
 
                         </div>
                     </div>
-                <?php
-                    endwhile;
-                else:
-                ?>
-                記事はありません
-                <?php endif; ?>
-                </div>
-
+                    
 <?php
-// ページネーション
+        endwhile;
+    endif;
+?>
+                </div>
+<?php
+    global $wp_query;
     $pages = $wp_query->max_num_pages;
     if ($pages > 1): // ページが2つ以上ならページネーション
     $range = ($pages > 3) ? 3 : $pages;
@@ -177,7 +164,7 @@ if (!empty($cats)) {
                             <a href="<?php echo esc_url(get_pagenum_link(7)); ?>">
                                 <div class="page-number">
                                     <div class="page-number-inner">
-                                        <?php echo $pages; ?>
+                                        7
                                     </div>
                                 </div>
                             </a>
@@ -265,5 +252,5 @@ if (!empty($cats)) {
             <?php get_template_part('sidebar'); ?>
         </div>
     </section>
-  
+    
 <?php get_footer(); ?>

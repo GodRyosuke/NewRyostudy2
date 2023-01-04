@@ -326,9 +326,23 @@ header .nav-menu ul li {
 .main-contents .main-con .new-articles .cards .card:hover .title {
   opacity: 0.7;
 }
+.main-contents .main-con .new-articles .cat-header {
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.main-contents .main-con .new-articles .cat-header .sub-title {
+  color: #767171;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.main-contents .main-con .new-articles .cat-header .title h2 {
+  font-size: 1.3rem;
+}
 .main-contents .main-con .new-articles .main-article {
   background-color: white;
-  padding: 0 15px;
+  padding: 15px;
+  margin-bottom: 15px;
 }
 .main-contents .main-con .new-articles .main-article .article-image img {
   display: block;
@@ -342,6 +356,7 @@ header .nav-menu ul li {
 .main-contents .main-con .new-articles .main-article .article-title {
   font-size: 1.4rem;
   font-family: "Noto Sans JP", sans-serif;
+  margin-bottom: 15px;
 }
 .main-contents .main-con .new-articles .main-article .category {
   display: flex;
@@ -395,6 +410,8 @@ header .nav-menu ul li {
   margin-left: 20px;
 }
 .main-contents .main-con .new-articles .main-article a {
+  display: inline;
+  overflow-wrap: break-word;
   text-decoration: underline;
 }
 .main-contents .main-con .new-articles .main-article .has-background {
@@ -406,8 +423,54 @@ header .nav-menu ul li {
 .main-contents .main-con .new-articles .main-article .has-small-font-size {
   font-size: 0.8rem !important;
 }
+.main-contents .main-con .new-articles .main-article pre code {
+  overflow-x: auto;
+  min-width: 100%;
+  padding: 10px;
+}
 .main-contents .main-con .new-articles .main-article pre code ol {
   background-color: #1d1f21;
+}
+.main-contents .main-con .new-articles .main-article .tags {
+  margin-bottom: 10px;
+}
+.main-contents .main-con .new-articles .main-article .tags .tag {
+  z-index: 3;
+  color: black;
+  margin: 0 7px;
+}
+.main-contents .main-con .new-articles .main-article .cards {
+  padding: 10px;
+}
+.main-contents .main-con .new-articles .main-article .cards .card {
+  border: 2px solid #dddddd;
+  margin-bottom: 10px;
+}
+.main-contents .main-con .new-articles .main-article .cards .card p {
+  margin: 0;
+}
+.main-contents .main-con .new-articles .main-article .cards .card a {
+  display: inline;
+}
+.main-contents .main-con .new-articles .main-article .cards .next {
+  text-align: right;
+}
+.main-contents .main-con .new-articles .main-article form {
+  padding: 10px;
+}
+.main-contents .main-con .new-articles .main-article form span {
+  width: 100%;
+  display: block;
+}
+.main-contents .main-con .new-articles .main-article form span input {
+  width: 100%;
+}
+.main-contents .main-con .new-articles .main-article form .wpcf7-submit {
+  display: inline;
+  width: 130px;
+  border: none;
+  background-color: #59c1bd;
+  color: white;
 }
 .main-contents .main-con .new-articles .main-article .main-desc {
   margin-bottom: 10px;
@@ -440,6 +503,24 @@ header .nav-menu ul li {
 .main-contents .main-con .new-articles .related-articles .title {
   text-align: left;
   font-family: "Noto Sans JP", sans-serif;
+  color: white;
+  background-color: #0d4c92;
+  padding: 10px;
+}
+.main-contents .main-con .new-articles .related-articles .title h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+.main-contents .main-con .new-articles .related-articles .cards .card {
+  margin-bottom: 10px;
+}
+.main-contents .main-con .new-articles .related-articles .cards .card .title {
+  text-align: left;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+  padding: 0;
 }
 .main-contents .main-con .new-articles .related-articles .cards a {
   flex: 45%;
@@ -606,10 +687,12 @@ header .nav-menu ul li {
 }
 .main-contents .main-con .sidebar .all-tags .content .tag {
   background-color: #dddddd;
+  display: inline-block;
   border-radius: 5px;
   padding: 2px 5px;
   margin-right: 5px;
   transition: 0.5s;
+  margin-bottom: 5px;
 }
 .main-contents .main-con .sidebar .all-tags .content .tag a {
   color: black;
@@ -640,13 +723,6 @@ header .nav-menu ul li {
     display: flex;
   }
 }
-@media (min-width: 1024px) {
-  .main-contents .main-con .new-articles .cards .card {
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-}
-
 .profile {
   background-color: white;
   padding: 20px;

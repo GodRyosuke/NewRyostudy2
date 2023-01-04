@@ -26,7 +26,7 @@ wp_nav_menu(
                     </div>
                     <div class="desc">
 <?php
-    $cats = get_the_category();
+    $cats = get_categories();
     if ( !empty( $cats ) ) {
         foreach ($cats as $cat) {
             printf("<div class='cat-btn2'><a href='%s'>%s</a></div>", get_category_link($cat->term_id), $cat->name);

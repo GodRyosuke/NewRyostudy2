@@ -26,58 +26,36 @@ if (!empty($cats)) {
                         endwhile;
                     endif;
                     ?>
-                            <pre>
-                                <code class="prettyprint linenums">#include &lt;iostream&gt;
-    
-    // これはmain関数です
-    int main(int argc, char** argv)
-    {
-        std::cout << "hello world\n";
-        return 0;
-    }</code>
-                            </pre>
-                    <!-- <div class="main-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores necessitatibus nam sed exercitationem nemo culpa voluptates, harum porro? Commodi perferendis ipsum dolorum similique beatae. Quas praesentium nostrum consequuntur ipsa dolore!
+                    <div class="tags">
+                    <i class="fas fa-tag"></i>
+<?php
+    $tags = get_the_tags();
+    if ( !empty( $tags ) ) {
+        foreach ( $tags as $tag ) {
+            printf(
+                '<span class="tag"><a href="%s">%s</a></span>',
+                get_tag_link( $tag->term_id ),
+                $tag->name
+            );
+        }
+    } else {
+        echo "no tag";
+    }
+?>
                     </div>
-                    <div class="index">
-                        目次
-                       <ul>
-                           <li><a href="#">abcdefg</a></li>
-                           <li><a href="#">abcdefg</a></li>
-                           <li><a href="#">abcdefg</a></li>
-                           <li><a href="#">abcdefg</a></li>
-                       </ul>
-                    </div>
-                    <div class="desc-title">
-                        <h2>これはタイトルです</h2>
-                        <div class="title-line">
-                            <div class="under-line"></div>
-                            <div class="main-line"></div>
+                    <div class="cards">
+<?php if (get_previous_post()): ?>
+                        <div class="card prev">
+                            <p><?php previous_post_link(); ?></p>
                         </div>
-                    </div>
-                    <div class="main-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel earum sed aliquid voluptas laudantium fuga, libero consectetur dolore ducimus nostrum vitae ratione, atque molestiae quis nihil veritatis sequi. Veritatis, laudantium?
-                    </div>
-                    <div class="desc-title">
-                        <h2>これはタイトルです</h2>
-                        <div class="title-line">
-                            <div class="under-line"></div>
-                            <div class="main-line"></div>
+<?php endif; ?>
+
+<?php if (get_next_post()): ?>
+                        <div class="card next">
+                           <p><?php next_post_link(); ?></p>
                         </div>
+<?php endif; ?>
                     </div>
-                    <div class="main-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel earum sed aliquid voluptas laudantium fuga, libero consectetur dolore ducimus nostrum vitae ratione, atque molestiae quis nihil veritatis sequi. Veritatis, laudantium?
-                    </div>
-                    <div class="desc-title">
-                        <h2>これはタイトルです</h2>
-                        <div class="title-line">
-                            <div class="under-line"></div>
-                            <div class="main-line"></div>
-                        </div>
-                    </div>
-                    <div class="main-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel earum sed aliquid voluptas laudantium fuga, libero consectetur dolore ducimus nostrum vitae ratione, atque molestiae quis nihil veritatis sequi. Veritatis, laudantium?
-                    </div> -->
                 </div>
                 <div class="related-articles">
                     <div class="title">
@@ -101,14 +79,46 @@ if ($the_query->have_posts()):
     while ($the_query->have_posts()):
         $the_query->the_post();
 ?>
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="card">
-                                <div class="card-image">
-                                    <?php the_post_thumbnail('post-thumbnails'); ?>
-                                </div>
-                                <div class="card-desc"><?php the_title(); ?></div>
-                            </div>
-                        </a>
+<div class="card">
+                        <a class="card-link" href="<?php the_permalink(); ?>"></a>
+                        <div class="category">
+<?php
+$cats = get_the_category();
+if (!empty($cats)) {
+    foreach ($cats as $cat) {
+        printf("<a href='%s'><span class='cat-btn btn-category'>%s</span></a>", get_category_link($cat->term_id), $cat->name);
+    }
+} else {
+    printf("no category");
+}
+?>
+                        </div>
+                        <div class="time">
+                        <?php the_time( 'Y/m/d' ); ?>
+                        </div>
+                        <div class="title">
+                            <?php the_title(); ?>
+                        </div>
+                        <div class="tag-buf"></div>
+                        <div class="tags">
+                        <i class="fas fa-tag"></i>
+<?php
+    $tags = get_the_tags();
+    if ( !empty( $tags ) ) {
+        foreach ( $tags as $tag ) {
+            printf(
+                '<span class="tag"><a href="%s">%s</a></span>',
+                get_tag_link( $tag->term_id ),
+                $tag->name
+            );
+        }
+    } else {
+        echo "no tag";
+    }
+?>
+
+                        </div>
+                    </div>
 <?php
     endwhile;
 endif;
