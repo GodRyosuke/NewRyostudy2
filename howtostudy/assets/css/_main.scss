@@ -163,6 +163,7 @@
                     font-size: 1rem;
                     margin-bottom: 0.7rem;
                     line-height: 1.7rem;
+                    font-weight: lighter;
                 }
                 ul {
                     list-style:disc;
@@ -186,8 +187,9 @@
                     font-size: 0.8rem !important;
                 }
                 pre {
+                    position: relative;
                     code {
-                        overflow-x: auto;
+                        overflow-x: scroll;
                         min-width: 100%;
                         // white-space:nowrap;
                         padding: 10px;

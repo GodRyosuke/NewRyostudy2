@@ -8,7 +8,12 @@ $code-black: #242c24;
 $page-bg-color:  rgb(246, 247, 255);
 
 body {
-    font-family: 'Sawarabi Mincho', sans-serif;
+    // font-family: 'Sawarabi Mincho', sans-serif;
+    // font-family: "M PLUS 1p";
+    font-family: 'Noto Sans JP', sans-serif;
+    // font-family: "Sawarabi Gothic";
+    // font-family: 'Sevillana', cursive;
+    // font-family: "M PLUS Rounded 1c";
 }
 
 @import 'header';

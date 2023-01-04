@@ -1,6 +1,5 @@
 let body = document.querySelector("body");
 
-
 function showMenu() {
     ListCon.style.right = "0";
     body.style.overflow = "hidden";
@@ -29,6 +28,8 @@ codes.forEach(function(code) {
     code.classList.add('prettyprint', 'linenums');
 });
 
+
+// contact form
 // input
 let inputs = document.querySelectorAll("input");
 inputs.forEach(function(input) {
@@ -36,4 +37,31 @@ inputs.forEach(function(input) {
 });
 
 let textarea = document.querySelector("textarea");
-textarea.classList.add('form-control');
+if (textarea) {
+    textarea.classList.add('form-control');
+}
+
+
+// Scroll Button
+const ScrollTop = document.querySelector('#ScrollTop');
+
+//クリックイベントを追加
+ScrollTop.addEventListener('click', scroll_to_top);
+
+function scroll_to_top(){
+    console.log("hello");
+	window.scroll({top: 0, behavior: 'smooth'});
+};
+window.addEventListener( 'scroll' , event_ecrotll );
+
+function event_ecrotll(){
+	
+	if(window.pageYOffset > 400){
+		// ScrollTop.style.display = 'block';
+		ScrollTop.style.opacity = '1';
+	}else	if(window.pageYOffset < 400){
+        // ScrollTop.style.display = 'none';
+		ScrollTop.style.opacity = '0';
+	}
+	
+};

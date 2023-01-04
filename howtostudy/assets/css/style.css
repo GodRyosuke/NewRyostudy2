@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
 body {
-  font-family: "Sawarabi Mincho", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 ul {
@@ -173,6 +173,28 @@ header .nav-menu ul li {
   header .list-con a {
     color: black;
   }
+}
+
+.scroll-top {
+  position: fixed;
+  background-color: #59c1bd;
+  padding: 25px;
+  border-radius: 50%;
+  bottom: 100px;
+  right: 15px;
+  z-index: 30;
+  color: white;
+  border: none;
+  transition: 0.5s;
+}
+.scroll-top i {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
 }
 
 .slides .image-con .c-item img {
@@ -401,6 +423,7 @@ header .nav-menu ul li {
   font-size: 1rem;
   margin-bottom: 0.7rem;
   line-height: 1.7rem;
+  font-weight: lighter;
 }
 .main-contents .main-con .new-articles .main-article ul {
   list-style: disc;
@@ -423,8 +446,11 @@ header .nav-menu ul li {
 .main-contents .main-con .new-articles .main-article .has-small-font-size {
   font-size: 0.8rem !important;
 }
+.main-contents .main-con .new-articles .main-article pre {
+  position: relative;
+}
 .main-contents .main-con .new-articles .main-article pre code {
-  overflow-x: auto;
+  overflow-x: scroll;
   min-width: 100%;
   padding: 10px;
 }

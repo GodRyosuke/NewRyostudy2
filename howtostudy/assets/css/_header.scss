@@ -174,3 +174,25 @@ header {
         }
     }
 }
+
+.scroll-top {
+    position: fixed;
+    background-color: $white-blue;
+    padding: 25px;
+    border-radius: 50%;
+    bottom: 100px;
+    right: 15px;
+    z-index: 30;
+    color: white;
+    border: none;
+    transition: 0.5s;
+    i {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        transform: translateY(-50%);
+    }
+}

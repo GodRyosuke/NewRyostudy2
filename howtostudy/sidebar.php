@@ -15,11 +15,11 @@
         </div>
         <div class="profile-desc">
             <div class="profile-desc-title">
-                <h3>Ryosuke</h3>
+                <h3>CODE F509K238A</h3>
             </div>
             <div class="sub-profile">- ロボットエンジニア -</div>
             <div class="profile-desc-inner">
-                大学院生<br>
+                ロボット大学院生<br>
                 専攻：ロボティクス&メカトロニクス<br>
                 興味: ロボット工学、物理数学、ゲーム開発<br>
                 <br>
