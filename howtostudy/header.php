@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/tomorrow-night.min.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
     <script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
