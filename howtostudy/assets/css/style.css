@@ -584,7 +584,7 @@ header .nav-menu ul li {
   width: 40px;
   height: 30px;
   border-radius: 20px;
-  border: solid 1px #0d4c92;
+  background-color: #dddddd;
   position: relative;
 }
 .main-contents .main-con .new-articles .pagination .page-arrow-wrap .page-ellipse .page-arrow {
@@ -599,7 +599,7 @@ header .nav-menu ul li {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid #0d4c92;
+  background-color: #dddddd;
   position: relative;
 }
 .main-contents .main-con .new-articles .pagination .pagenum .page-circle .page-number {
@@ -1006,7 +1006,7 @@ footer .copy-right .desc {
   opacity: 0.5;
 }
 
-/*# sourceMappingURL=a-main.css.map */
+
 .cat-card-image {
   width: 100%;
   padding: 20px;

@@ -1,3 +1,4 @@
 /db
 .vscode/
 !./phpmyadmin/sessions
+/de_db

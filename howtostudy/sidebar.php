@@ -15,7 +15,7 @@
         </div>
         <div class="profile-desc">
             <div class="profile-desc-title">
-                <h3>CODE F509K238A</h3>
+                <h3>Ryosuke</h3>
             </div>
             <div class="sub-profile">- ロボットエンジニア -</div>
             <div class="profile-desc-inner">

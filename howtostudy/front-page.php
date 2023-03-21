@@ -51,12 +51,6 @@ if (!empty($cats)) {
                 $tag->name
             );
         }
-        
-        // printf(
-        // '<a href="%s">%s</a>',
-        // get_tag_link( $tags[0]->term_id ),
-        // $tags[0]->name
-        // );
     } else {
         echo "no tag";
     }
@@ -70,7 +64,6 @@ if (!empty($cats)) {
     endif;
 ?>
                 </div>
-
 <?php
     $pages = $my_posts->max_num_pages;
     if ($pages > 1): // ページが2つ以上ならページネーション

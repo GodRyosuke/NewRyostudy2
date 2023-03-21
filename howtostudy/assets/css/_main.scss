@@ -340,7 +340,8 @@
                         width: 40px;
                         height: 30px;
                         border-radius: 20px;
-                        border: solid 1px $dark-blue;
+                        // border: solid 1px $dark-blue;
+                        background-color: $dark-gray;
                         position: relative;
                         .page-arrow {
                             position: absolute;
@@ -357,7 +358,8 @@
                         width: 30px;
                         height: 30px;
                         border-radius: 50%;
-                        border: 1px solid $dark-blue;
+                        background-color: $dark-gray;
+                        // border: 1px solid $dark-blue;
                         position: relative;
                         .page-number {
                             position: absolute;

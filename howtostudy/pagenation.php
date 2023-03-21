@@ -1,5 +1,5 @@
 <?php
-    $pages = $my_posts->max_num_pages;
+    $pages = $pagenation_query->max_num_pages;
     if ($pages > 1): // ページが2つ以上ならページネーション
     $range = ($pages > 3) ? 3 : $pages;
 ?>
