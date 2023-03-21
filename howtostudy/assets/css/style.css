@@ -426,6 +426,9 @@ header .nav-menu ul li {
   line-height: 1.7rem;
   font-weight: lighter;
 }
+.main-contents .main-con .new-articles .main-article strong {
+  font-weight: bold;
+}
 .main-contents .main-con .new-articles .main-article ul {
   list-style: disc;
   margin-bottom: 15px;
