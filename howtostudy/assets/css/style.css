@@ -334,15 +334,14 @@ header .nav-menu ul li {
 }
 .main-contents .main-con .new-articles .cards .card .tags {
   z-index: 3;
-  display: inline;
-  position: absolute;
-  margin-left: 20px;
-  margin-bottom: 10px;
+  display: block;
+  width: 100%;
   bottom: 0;
   left: 0;
 }
 .main-contents .main-con .new-articles .cards .card .tag {
   z-index: 3;
+  display: inline-block;
   color: black;
   margin: 0 7px;
 }

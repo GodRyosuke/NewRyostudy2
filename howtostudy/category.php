@@ -35,7 +35,6 @@ if (!empty($cats)) {
                         <div class="title">
                             <?php the_title(); ?>
                         </div>
-                        <div class="tag-buf"></div>
                         <div class="tags">
                         <i class="fas fa-tag"></i>
 <?php
